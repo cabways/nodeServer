@@ -1,0 +1,14 @@
+{
+  "name": "nodeprj",
+  "version": "1.0.0",
+  "description": "这是个用node搭建服务器的联手项目",
+  "main": "webSorket.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cabways",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.18.1"
+  }
+}
