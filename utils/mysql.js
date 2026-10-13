@@ -13,10 +13,21 @@ const connection = getConnection({
     host: 'localhost',
     user: 'root',
     password: '123456',
-    database: 'cabways'
+    database: 'node_learning'
 })
 
-module.exports = connection;
+const query = (sql, params) => {
+    return new Promise((resolve, reject)=>{
+        connection.query(sql, params, (err, result) => {
+            if (err) return reject(err);
+            resolve(result);
+        });
+    })
+}
+
+module.exports = {
+    query
+};
 
 // const select = (connection) => {
 //     var sql = 'SELECT * FROM students';
